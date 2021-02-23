@@ -9,8 +9,6 @@ export const ProgressDonut = ({
   progress,
   color,
 }) => {
-
-  console.log(radius, width, progress, color)
   const arcGenBg = arc()
     .innerRadius(radius - width)
     .outerRadius(radius)
