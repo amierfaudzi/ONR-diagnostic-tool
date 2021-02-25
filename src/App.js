@@ -2,7 +2,6 @@ import './App.css';
 import data from './data.json';
 import { useState } from 'react';
 import GaugeCard from './components/GaugeCard/GaugeCard';
-import { AreaChart } from './components/AreaChart';
 import SideNav from './components/SideNav/SideNav';
 import TopNav from './components/TopNav/TopNav';
 
@@ -31,7 +30,6 @@ function App() {
             )
           })}
           </div>
-          <AreaChart/>
       </div>
 
     </div>

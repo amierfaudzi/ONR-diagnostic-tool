@@ -9,12 +9,15 @@ export const ProgressDonut = ({
   progress,
   color,
 }) => {
+
+  // Background Circle
   const arcGenBg = arc()
     .innerRadius(radius - width)
     .outerRadius(radius)
     .startAngle(0)
     .endAngle(Math.PI * 2);
 
+  // Foreground circle
   const arcGenFg = arc()
     .innerRadius(radius - width)
     .outerRadius(radius)
