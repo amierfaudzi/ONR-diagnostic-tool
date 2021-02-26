@@ -1,4 +1,9 @@
-.area {
-    width: 440px;
-    height: 440px;
+#area {
+    width: 1000px;
+    height: 300px;
+    display: flex;
+}
+
+.chart-area {
+    fill: turquoise
 }

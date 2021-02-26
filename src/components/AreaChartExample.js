@@ -1,63 +1,76 @@
-// import * as d3 from 'd3';
+import * as d3 from 'd3';
+import './AreaChart.css';
 
-// var data = [
-//     { x: 0, y: 10, },
-//     { x: 1, y: 15, },
-//     { x: 2, y: 35, },
-//     { x: 3, y: 20, },
-// ];
+const AreaChartExample = () => {
 
-// var margin = {top: 20, right: 20, bottom: 30, left: 50},
-//     width = 575 - margin.left - margin.right,
-//     height = 350 - margin.top - margin.bottom;
+    // let data = [
+    //     {
+    //        "date":1,
+    //        "sample":21,
+    //        "score":75,
+    //        "vsly":0
+    //     },
+    //     {
+    //        "date":2,
+    //        "sample":110,
+    //        "score":71,
+    //        "vsly":0
+    //     },
+    //     {
+    //        "date":3,
+    //        "sample":2,
+    //        "score":62,
+    //        "vsly":0
+    //     },
+    //     {
+    //        "date":4,
+    //        "sample":0,
+    //        "score":0,
+    //        "vsly":0
+    //     }
+    //  ]
 
-// var x = d3.scale.linear()
-//     .domain([0, d3.max(data, function(d) { return d.x; })])
-//     .range([0, width]);
+    const totalWidth = 500;
+    const totalHeight = 500;
 
-// var y = d3.scale.linear()
-//     .domain([0, d3.max(data, function(d) { return d.y; })])
-//     .range([height, 0]);
+    const margin = {
+        top: 20,
+        right: 20,
+        bottom: 110,
+        left: 40
+      };
 
-// var xAxis = d3.svg.axis()
-//     .scale(x)
-//     .orient("bottom");
+    const width = totalWidth - margin.left - margin.right;
+    const height = totalHeight - margin.top - margin.bottom;
 
-// var yAxis = d3.svg.axis()
-//     .scale(y)
-//     .orient("left");
+    var data = [
+    { x: 0, y: 10, },
+    { x: 1, y: 15, },
+    { x: 2, y: 35, },
+    { x: 3, y: 20, },
+    ];
 
-// var area = d3.svg.area()
-//     .x(function(d) { return x(d.x); })
-//     .y0(height)
-//     .y1(function(d) { return y(d.y); });
+    // Create the scale for the data
+    let x = d3.scaleLinear().domain([0, d3.max(data,function(d) { return d.x;})]).range([0, width]);
+    let y = d3.scaleLinear().domain([0, d3.max(data, function(d) { return d.y;})]).range([height, 0]);
 
-// var svg = d3.select("svg#area")
-//     .attr("width", width + margin.left + margin.right)
-//     .attr("height", height + margin.top + margin.bottom)
-//   .append("g")
-//     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    // Make the area chart
+    let area = d3.area()
+    .x(function(d) { return x(d.x); })
+    .y0(height)
+    .y1(function(d) { return y(d.y); })
 
-// svg.append("path")
-//     .datum(data)
-//     .attr("class", "area")
-//     .attr("d", area);
+    console.log(area(data))
 
-// svg.append("g")
-//     .attr("class", "x axis")
-//     .attr("transform", "translate(0," + height + ")")
-//     .call(xAxis);
+    return (
+       <>
+       <h2>This is the AREA CHART</h2>
+         <svg className="area">
+             <path className="path" fill="steelblue" d={`${area(data)}`}></path>
+         </svg>
+       </>
 
-// svg.append("g")
-//     .attr("class", "y axis")
-//     .call(yAxis);
+    )
+}
 
-//     import React from 'react'
-    
-//     export default function AreaChartExample() {
-//         return (
-//             <svg id="area">
-//             </svg>
-//         )
-//     }
-    
+export default AreaChartExample;
