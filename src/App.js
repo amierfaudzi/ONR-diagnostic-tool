@@ -26,9 +26,15 @@ function App() {
         <div className="subtitle">Diagnostic Tool</div>
         <div className="legend">
           <h4>Filters</h4>
-          <div>
-            <h5>All CQA Results</h5>
-            <h5>CQAs with Closed Loop</h5>
+          <div className="legend__container">
+            <div className="legend__row">
+              <div className="legend__color legend__color--one"></div>
+              <p>All CQA Results</p>
+            </div>
+            <div className="legend__row">
+              <div className="legend__color legend__color--two"></div>
+              <p>CQAs with Closed Loop</p>
+            </div>
           </div>
         </div>
         <div className="chart-wrapper">
