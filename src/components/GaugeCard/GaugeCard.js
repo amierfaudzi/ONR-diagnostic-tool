@@ -11,6 +11,7 @@ export default function GaugeCard({data, index, isSelected, selected}) {
                 progress={data.score/100}
                 radius={52}
                 color={(index==selected) ? '#00aeef' : '#0071c5'}
+                vsly={data.vsly}
             />
             <p className='gauge-card__subtitle'>Sample: {data.sample}</p>
         </div>

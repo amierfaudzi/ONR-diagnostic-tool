@@ -8,6 +8,7 @@ export const ProgressDonut = ({
   width,
   progress,
   color,
+  vsly
 }) => {
 
   // Background Circle
@@ -31,11 +32,20 @@ export const ProgressDonut = ({
       <path d={arcGenFg()} fill={color} />
       <text
         textAnchor="middle"
-        dy="0.32em"
+        dy="0.30em"
         fill={color}
         fontSize="1.5rem"
       >
         {Math.floor(progress * 100) + '%'}
+      </text>
+      <text
+        textAnchor="bottom"
+        dy="1.5em"
+        dx="-0.8em"
+        fill="gray"
+        fontSize="1rem"
+      >
+        {vsly ? vsly : 'N/A'}
       </text>
     </g>
     </svg>
