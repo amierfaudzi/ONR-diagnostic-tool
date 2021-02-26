@@ -15,10 +15,30 @@
   align-items: center;
 }
 
+.chart-header {
+  padding-top: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.chart-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.chart-navigation__title {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: gray;
+  font-weight: lighter;
+}
+
 .chart-wrapper {
   display: flex;
-  justify-content: space-evenly;
-  width: 100%;
+  justify-content: space-between;
+  width:70%;
 }
 
 .legend {
@@ -67,6 +87,7 @@
   width: 100%;
   text-transform: uppercase;
   font-size: 3rem;
+  color: gray;
 }
 
 .subtitle {
@@ -74,4 +95,5 @@
   margin-bottom: 2rem;
   width: 100%;
   font-size: 2rem;
+  color: gray;
 }

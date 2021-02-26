@@ -35,7 +35,6 @@ const AreaChart = ({selectedData, areaTitle}) => {
     
     return (
       <>
-        <h1>{areaTitle}</h1>
          <svg id="area" viewBox="0 0 1000 300">
              <path className="chart-area" d={`${area(data)}`}></path>
          </svg>

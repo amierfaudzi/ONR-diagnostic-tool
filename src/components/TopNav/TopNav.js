@@ -9,7 +9,7 @@ export default function TopNav() {
             </div>
             <div className="top-nav__sub">
                 <p>Logged in as General User</p>
-                <span>|</span>
+                <span className="divider">|</span>
                 <div className="icon-top"></div>
                 <div className="icon-top"></div>
                 <div className="icon-top"></div>

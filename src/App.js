@@ -5,6 +5,7 @@ import GaugeCard from './components/GaugeCard/GaugeCard';
 import SideNav from './components/SideNav/SideNav';
 import TopNav from './components/TopNav/TopNav';
 import AreaChart from './components/AreaChart/AreaChart';
+import ButtonTray from './components/ButtonTray/ButtonTray';
 
 function App() {
 
@@ -12,7 +13,6 @@ function App() {
   let [areaTitle, setAreaTitle] = useState("Quality Score");
 
   useEffect(() => {
-    console.log("This has fire")
     setAreaTitle(MockData.gaugeData[selected].name)
   }, [selected])
 
@@ -24,19 +24,26 @@ function App() {
         <TopNav/>
         <div className="title">Performance Management</div>
         <div className="subtitle">Diagnostic Tool</div>
-        <div className="legend">
-          <h4>Filters</h4>
-          <div className="legend__container">
-            <div className="legend__row">
-              <div className="legend__color legend__color--one"></div>
-              <p>All CQA Results</p>
-            </div>
-            <div className="legend__row">
-              <div className="legend__color legend__color--two"></div>
-              <p>CQAs with Closed Loop</p>
+        <div className="chart-header">
+          <div className="legend">
+            <h4>Filters</h4>
+            <div className="legend__container">
+              <div className="legend__row">
+                <div className="legend__color legend__color--one"></div>
+                <p>All CQA Results</p>
+              </div>
+              <div className="legend__row">
+                <div className="legend__color legend__color--two"></div>
+                <p>CQAs with Closed Loop</p>
+              </div>
             </div>
           </div>
+          <div className="chart-navigation">
+            <p className="chart-navigation__title">{areaTitle} trend</p>
+            <ButtonTray/>
+          </div>
         </div>
+
         <div className="chart-wrapper">
           <div className="donut-wrapper">
             {MockData.gaugeData.map((data, index) => {
@@ -50,7 +57,7 @@ function App() {
             })}
           </div>
           <div>
-            <AreaChart selectedData={MockData.areaData[`${areaTitle}`]} areaTitle={areaTitle}/>
+            <AreaChart selectedData={MockData.areaData[`${areaTitle}`]}/>
           </div>
         </div>
       </div>
