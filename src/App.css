@@ -90,10 +90,20 @@
   color: gray;
 }
 
+.title__content {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .subtitle {
   background-color: #edecec;
   margin-bottom: 2rem;
   width: 100%;
   font-size: 2rem;
   color: gray;
+}
+
+.subtitle__content {
+  width: 80%;
+  margin: 0 auto;
 }

@@ -22,8 +22,12 @@ function App() {
 
       <div className="main">
         <TopNav/>
-        <div className="title">Performance Management</div>
-        <div className="subtitle">Diagnostic Tool</div>
+        <div className="title">
+          <div className="title__content">Performance Management</div>
+        </div>
+        <div className="subtitle">
+          <div className="subtitle__content">Diagnostic Tool</div> 
+        </div>
         <div className="chart-header">
           <div className="legend">
             <h4>Filters</h4>
