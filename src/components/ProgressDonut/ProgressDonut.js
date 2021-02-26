@@ -41,7 +41,7 @@ export const ProgressDonut = ({
       <text
         textAnchor="bottom"
         dy="1.5em"
-        dx="-0.8em"
+        dx="-0.9em"
         fill="gray"
         fontSize="1rem"
       >

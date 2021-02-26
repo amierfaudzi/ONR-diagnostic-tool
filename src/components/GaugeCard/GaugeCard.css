@@ -10,12 +10,18 @@
     border-radius: 4px;
 }
 
+.gauge-card--active {
+    border: 1px solid #00aeef;
+    background-color: rgba(0,174,239,0.1);
+}
+
+
 .gauge-card__title {
-    color: #00aeef;
+    color: #0071c5;
 }
 
 .gauge-card__title--active {
-    color: #0071c5;
+    color:  #00aeef;
 }
 
 .gauge-card__subtitle {
