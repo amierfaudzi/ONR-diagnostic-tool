@@ -7,6 +7,11 @@
     align-items: center;
 }
 
+.home {
+    color: white;
+    font-weight: bold;
+}
+
 .top-nav__sub {
     display: flex;
 }

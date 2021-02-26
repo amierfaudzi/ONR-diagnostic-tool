@@ -18,6 +18,11 @@
 .chart-wrapper {
   display: flex;
   justify-content: space-evenly;
+  width: 100%;
+}
+
+.legend {
+  margin-bottom: 3rem;
 }
 
 .donut-wrapper {

@@ -24,6 +24,13 @@ function App() {
         <TopNav/>
         <div className="title">Performance Management</div>
         <div className="subtitle">Diagnostic Tool</div>
+        <div className="legend">
+          <h4>Filters</h4>
+          <div>
+            <h5>All CQA Results</h5>
+            <h5>CQAs with Closed Loop</h5>
+          </div>
+        </div>
         <div className="chart-wrapper">
           <div className="donut-wrapper">
             {MockData.gaugeData.map((data, index) => {
@@ -37,7 +44,7 @@ function App() {
             })}
           </div>
           <div>
-            <AreaChart selectedData={MockData.areaData[`${areaTitle}`]}/>
+            <AreaChart selectedData={MockData.areaData[`${areaTitle}`]} areaTitle={areaTitle}/>
           </div>
         </div>
       </div>

@@ -1,9 +1,10 @@
 import * as d3 from 'd3';
 import './AreaChart.css';
 
-// base code from https://www.mattlayman.com/2015/area.js
+// Base code from https://www.mattlayman.com/2015/area.js
+// More info from https://observablehq.com/@d3/learn-d3-shapes?collection=@d3/learn-d3
 
-const AreaChart = ({selectedData}) => {
+const AreaChart = ({selectedData, areaTitle}) => {
 
     let data = selectedData;
 
@@ -34,7 +35,7 @@ const AreaChart = ({selectedData}) => {
     
     return (
       <>
-        <h1>Hi</h1>
+        <h1>{areaTitle}</h1>
          <svg id="area" viewBox="0 0 1000 300">
              <path className="chart-area" d={`${area(data)}`}></path>
          </svg>

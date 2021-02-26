@@ -2,9 +2,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     border: 1px solid gray;
     width: 132px;
     height: 195px;
     margin-bottom: 12px;
     border-radius: 4px;
+}
+
+.gauge-card__title {
+    color: #00aeef;
+}
+
+.gauge-card__title--active {
+    color: #0071c5;
+}
+
+.gauge-card__subtitle {
+    color: gray;
 }
