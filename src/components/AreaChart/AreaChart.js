@@ -32,11 +32,17 @@ const AreaChart = ({selectedData, areaTitle}) => {
     .x(function(d,i) { return x(i); }) // Using data length instead because the chart area needs number
     .y0((height))
     .y1(function(d) { return y(d.score); })
+
+    // Chart axis
+    let xAxis = d3.axisBottom(x);
+
+    console.log(xAxis)
     
     return (
       <>
          <svg id="area" viewBox="0 0 1000 300">
              <path className="chart-area" d={`${area(data)}`}></path>
+             <g>{xAxis}</g>
          </svg>
       </>
     )

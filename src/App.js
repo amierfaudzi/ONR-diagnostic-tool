@@ -60,7 +60,7 @@ function App() {
               )
             })}
           </div>
-          <div>
+          <div className="area-chart-wrapper">
             <AreaChart selectedData={MockData.areaData[`${areaTitle}`]}/>
           </div>
         </div>

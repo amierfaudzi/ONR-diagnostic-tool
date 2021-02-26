@@ -30,7 +30,7 @@
 
 .chart-navigation__title {
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: gray;
   font-weight: lighter;
 }
@@ -80,6 +80,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.area-chart-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
 }
 
 .title {
