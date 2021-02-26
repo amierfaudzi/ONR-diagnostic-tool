@@ -2,4 +2,11 @@
     background-color: #0071c5;
     height: 3rem;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-nav__sub {
+    display: flex;
 }

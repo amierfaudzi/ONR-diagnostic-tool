@@ -30,9 +30,13 @@
 .title {
   background-color: #ffffff;
   width: 100%;
+  text-transform: uppercase;
+  font-size: 3rem;
 }
 
 .subtitle {
   background-color: #edecec;
+  margin-bottom: 2rem;
   width: 100%;
+  font-size: 2rem;
 }

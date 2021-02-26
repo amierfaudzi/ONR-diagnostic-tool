@@ -5,14 +5,9 @@ import './AreaChart.css';
 
 const AreaChart = ({selectedData}) => {
 
-    // let data = selectedData;
-    // console.log("selected data", data)
-
     let data = selectedData;
 
-   console.log("selected data", data)
-
-    const totalWidth = 1000;
+    const totalWidth = 1300;
     const totalHeight = 300;
 
     const margin = {
@@ -29,16 +24,13 @@ const AreaChart = ({selectedData}) => {
 
     // Create the scale for the data
     let x = d3.scaleTime().domain([0, data.length]).range([0, width]);
-    // let x = d3.scaleUtc().domain(d3.extent(data, d => d.date)).range([0, width])
     let y = d3.scaleLinear().domain([0, d3.max(data, function(d) {return d.score;})]).range([height, 0]);
 
     // Make the area chart
     let area = d3.area()
-    .x(function(d,i) { return x(i); }) // Using data length instead because the area needs number
+    .x(function(d,i) { return x(i); }) // Using data length instead because the chart area needs number
     .y0((height))
     .y1(function(d) { return y(d.score); })
-
-    console.log(area(data))
     
     return (
       <>

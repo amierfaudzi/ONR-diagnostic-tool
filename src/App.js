@@ -22,8 +22,8 @@ function App() {
 
       <div className="main">
         <TopNav/>
-        <h1 className="title">Performance Management</h1>
-        <h2 className="subtitle">Diagnostic Tool</h2>
+        <div className="title">Performance Management</div>
+        <div className="subtitle">Diagnostic Tool</div>
         <div className="chart-wrapper">
           <div className="donut-wrapper">
             {MockData.gaugeData.map((data, index) => {
