@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import GaugeCard from './components/GaugeCard/GaugeCard';
 import SideNav from './components/SideNav/SideNav';
 import TopNav from './components/TopNav/TopNav';
-import AreaChart from './components/AreaChart';
+import AreaChart from './components/AreaChart/AreaChart';
 
 function App() {
 
@@ -24,18 +24,22 @@ function App() {
         <TopNav/>
         <h1 className="title">Performance Management</h1>
         <h2 className="subtitle">Diagnostic Tool</h2>
+        <div className="chart-wrapper">
           <div className="donut-wrapper">
-          {MockData.gaugeData.map((data, index) => {
-            return (
-              <GaugeCard 
-                data={data}
-                index={index} 
-                isSelected={isSelected} 
-                selected={selected}/>
-            )
-          })}
+            {MockData.gaugeData.map((data, index) => {
+              return (
+                <GaugeCard 
+                  data={data}
+                  index={index} 
+                  isSelected={isSelected} 
+                  selected={selected}/>
+              )
+            })}
           </div>
-          <AreaChart selectedData={MockData.areaData[`${areaTitle}`]}/>
+          <div>
+            <AreaChart selectedData={MockData.areaData[`${areaTitle}`]}/>
+          </div>
+        </div>
       </div>
     </div>
   );

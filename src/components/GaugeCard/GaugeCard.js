@@ -1,6 +1,6 @@
 import React from 'react';
 import './GaugeCard.css';
-import { ProgressDonut } from '../ProgressDonut';
+import { ProgressDonut } from '../ProgressDonut/ProgressDonut';
 
 export default function GaugeCard({data, index, isSelected, selected}) {
     return (

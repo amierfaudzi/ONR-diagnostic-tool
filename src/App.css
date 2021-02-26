@@ -15,6 +15,11 @@
   align-items: center;
 }
 
+.chart-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .donut-wrapper {
   width: 456px;
   border: 1px solid black;
