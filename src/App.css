@@ -22,18 +22,17 @@
 
 .donut-wrapper {
   width: 456px;
-  border: 1px solid black;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .title {
-  background-color: gainsboro;
+  background-color: #ffffff;
   width: 100%;
 }
 
 .subtitle {
-  background-color: gray;
+  background-color: #edecec;
   width: 100%;
 }

@@ -10,7 +10,7 @@ export default function GaugeCard({data, index, isSelected, selected}) {
                 width={6}
                 progress={data.score/100}
                 radius={52}
-                color={(index==selected) ? 'red' : 'steelblue'}
+                color={(index==selected) ? '#00aeef' : '#0071c5'}
             />
             <h3>Sample: {data.sample}</h3>
         </div>
